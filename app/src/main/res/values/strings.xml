@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyCalculator_Kotlin</string>
+    <string name="calc_text">123124123</string>
+</resources>
