@@ -6,13 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.forEach
 
 class MainActivity : AppCompatActivity() {
+
+    var inputTextView: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        inputTextView = findViewById(R.id.inputTextView)
 
 //        val buttons = getAllButtons()
 //        addOnClickListenersTo(buttons)
@@ -20,7 +26,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onDigit(view: View){
+        inputTextView?.append((view as Button).text)
+    }
 
+    fun onClear(view: View){
+        inputTextView?.text = ""
     }
 
 //    private fun addOnClickListenersTo(buttons: MutableList<Button>) {
